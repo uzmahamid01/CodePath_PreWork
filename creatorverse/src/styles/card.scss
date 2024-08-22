@@ -1,0 +1,141 @@
+article {
+  position: relative; 
+  border-radius: 8px;
+  background-size: cover; 
+  background-position: center center; 
+  margin: 16px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  padding: 16px;
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden; /* Hide any overflow */
+  color: #fff; /* Ensure text color is visible against the background */
+  border: 2px solid #cacaca; /* Add border with width, style, and color */
+
+  /* Pseudo-element for the dark tint */
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Dark tint with 50% opacity */
+      z-index: 1; /* Ensure the tint is behind the content */
+  }
+
+  /* Ensure content is above the pseudo-element */
+  .card-header,
+  .socials,
+  .description {
+      position: relative;
+      z-index: 2; /* Ensure content is above the tint */
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.editicon {
+  color: #cacaca; /* Adjust size as needed */
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+
+  &:hover {
+      color: #7f5454; /* Change color on hover */
+      transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  }
+}
+
+.socials {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+
+  a {
+      color: #cacaca;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: color 0.3s ease; /* Smooth transition effects */
+
+      &:hover {
+          color: #866b6b; /* Change color on hover */
+      }
+  }
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #840d0d; /* Adjust color as needed */
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -o-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: 3; 
+  -moz-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.expandicon {
+  cursor: pointer;
+  color: #cacaca;
+  font-size: 1.0rem;
+  margin-left: 8px;
+  margin-top: -16px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+
+  &:hover {
+      color: #756565; /* Change color on hover */
+      transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  }
+}
+
+.name-expand {
+  display: flex;
+  align-items: center;
+
+  h3 {
+      margin-right: 8px; /* Add some space between the name and the expand icon */
+  }
+}
+
+.editicon {
+  display: flex;
+  align-items: center;
+
+  #trash {
+      margin-left: 10px; /* Space between the edit and trash icons */
+      color: #f07c80; /* Initial color for the trash icon */
+      cursor: pointer; /* Cursor changes to pointer on hover */
+      transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+      font-size: 0.9em;
+
+      &:hover {
+          color: #9d8989; /* Change color on hover */
+          transform: scale(1.1); /* Slightly enlarge the icon on hover */
+      }
+  }
+
+  /* Additional styling for the edit icon if needed */
+  svg {
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+
+      &:hover {
+          color: #7f5454; /* Change color on hover */
+          transform: scale(1.1); /* Slightly enlarge the icon on hover */
+      }
+  }
+}

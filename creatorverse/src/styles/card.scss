@@ -6,14 +6,13 @@ article {
   margin: 16px 5px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Align content to the bottom */
+  justify-content: flex-end; 
   padding: 16px;
-  height: 300px; /* Adjust the height as needed */
-  overflow: hidden; /* Hide any overflow */
-  color: #fff; /* Ensure text color is visible against the background */
-  border: 2px solid #cacaca; /* Add border with width, style, and color */
+  height: 300px; 
+  overflow: hidden; 
+  color: #fff; 
+  border: 2px solid #cacaca; 
 
-  /* Pseudo-element for the dark tint */
   &::before {
       content: '';
       position: absolute;
@@ -21,16 +20,15 @@ article {
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Dark tint with 50% opacity */
-      z-index: 1; /* Ensure the tint is behind the content */
+      background: rgba(0, 0, 0, 0.5); 
+      z-index: 1; 
   }
 
-  /* Ensure content is above the pseudo-element */
   .card-header,
   .socials,
   .description {
       position: relative;
-      z-index: 2; /* Ensure content is above the tint */
+      z-index: 2; 
   }
 }
 
@@ -42,14 +40,14 @@ article {
 }
 
 .editicon {
-  color: #cacaca; /* Adjust size as needed */
+  color: #cacaca; 
   cursor: pointer;
   font-size: 1.3rem;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  transition: color 0.3s ease, transform 0.3s ease; 
 
   &:hover {
-      color: #7f5454; /* Change color on hover */
-      transform: scale(1.1); /* Slightly enlarge the icon on hover */
+      color: #7f5454; 
+      transform: scale(1.1); 
   }
 }
 
@@ -62,17 +60,17 @@ article {
       color: #cacaca;
       font-size: 1.3rem;
       text-decoration: none;
-      transition: color 0.3s ease; /* Smooth transition effects */
+      transition: color 0.3s ease; 
 
       &:hover {
-          color: #866b6b; /* Change color on hover */
+          color: #866b6b; 
       }
   }
 }
 
 .description {
   font-size: 0.9rem;
-  color: #840d0d; /* Adjust color as needed */
+  color: #840d0d; 
   overflow: hidden;
   display: -webkit-box;
   display: -moz-box;
@@ -94,11 +92,11 @@ article {
   font-size: 1.0rem;
   margin-left: 8px;
   margin-top: -16px;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  transition: color 0.3s ease, transform 0.3s ease; 
 
   &:hover {
-      color: #756565; /* Change color on hover */
-      transform: scale(1.1); /* Slightly enlarge the icon on hover */
+      color: #756565; 
+      transform: scale(1.1); 
   }
 }
 
@@ -107,7 +105,7 @@ article {
   align-items: center;
 
   h3 {
-      margin-right: 8px; /* Add some space between the name and the expand icon */
+      margin-right: 8px; 
   }
 }
 
@@ -116,26 +114,25 @@ article {
   align-items: center;
 
   #trash {
-      margin-left: 10px; /* Space between the edit and trash icons */
-      color: #f07c80; /* Initial color for the trash icon */
-      cursor: pointer; /* Cursor changes to pointer on hover */
-      transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+      margin-left: 10px; 
+      color: #f07c80; 
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease; 
       font-size: 0.9em;
 
       &:hover {
-          color: #9d8989; /* Change color on hover */
-          transform: scale(1.1); /* Slightly enlarge the icon on hover */
+          color: #9d8989; 
+          transform: scale(1.1); 
       }
   }
 
-  /* Additional styling for the edit icon if needed */
   svg {
       cursor: pointer;
-      transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+      transition: color 0.3s ease, transform 0.3s ease; 
 
       &:hover {
-          color: #7f5454; /* Change color on hover */
-          transform: scale(1.1); /* Slightly enlarge the icon on hover */
+          color: #7f5454; 
+          transform: scale(1.1); 
       }
   }
 }

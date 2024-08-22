@@ -55,20 +55,20 @@
   
   .cancel-button  {
     background-color: #ffffff;
-    color: #000; /* Set the text color to black or any desired color */
+    color: #000; 
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
     
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: box-shadow 0.3s ease;
   
     &:hover {
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     }
   
     &:active {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when clicked */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     }
   }

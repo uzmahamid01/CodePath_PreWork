@@ -12,6 +12,7 @@ function EditCreator() {
   const [description, setDescription] = useState('');
   const [twitter, setTwitter] = useState('');
   const [instagram, setInstagram] = useState('');
+  const [youtube, setYoutube] = useState(''); 
 
   useEffect(() => {
     const fetchCreator = async () => {
@@ -30,6 +31,7 @@ function EditCreator() {
         setDescription(data.description);
         setTwitter(data.twitter);
         setInstagram(data.instagram);
+        setYoutube(data.youtube); // Set YouTube URL state
       }
     };
 
@@ -40,14 +42,14 @@ function EditCreator() {
     event.preventDefault();
     const { data, error } = await supabase
       .from('creators')
-      .update({ imageURL, name, description, twitter, instagram })
+      .update({ imageURL, name, description, twitter, instagram, youtube }) // Include YouTube URL in update
       .eq('id', creatorId);
 
     if (error) {
       console.error('Error updating creator:', error.message);
       alert(`There was an error updating the creator: ${error.message}`);
     } else {
-      alert('Creator updated successfully!');   
+      alert('Creator updated successfully!');
       navigate('/');
       window.location.reload();
     }
@@ -106,7 +108,16 @@ function EditCreator() {
             onChange={(e) => setInstagram(e.target.value)}
           />
         </div>
-        <button type=" submit">Update</button>
+        <div className="form-group"> 
+          <label htmlFor="youtube">YouTube URL</label>
+          <input
+            type="text"
+            id="youtube"
+            value={youtube}
+            onChange={(e) => setYoutube(e.target.value)}
+          />
+        </div>
+        <button type="submit">Update</button>
       </form>
     </div>
   );

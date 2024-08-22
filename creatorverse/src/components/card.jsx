@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEdit, FaTwitter, FaInstagram, FaInfoCircle, FaTrash } from 'react-icons/fa';
+import { FaEdit, FaTwitter, FaInstagram, FaInfoCircle, FaTrash, FaYoutube } from 'react-icons/fa'; 
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../client'; 
 import ConfirmationModal from './window/Confirmation';
@@ -69,6 +69,9 @@ const Card = ({ creator, onDelete }) => {
         </a>
         <a href={creator.instagram} target="_blank" rel="noopener noreferrer">
           <FaInstagram />
+        </a>
+        <a href={creator.youtube} target="_blank" rel="noopener noreferrer"> 
+          <FaYoutube />
         </a>
       </div>
       <div className="description">

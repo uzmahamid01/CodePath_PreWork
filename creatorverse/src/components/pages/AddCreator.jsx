@@ -9,6 +9,7 @@ function AddCreator({ onCreatorAdded }) {
   const [description, setDescription] = useState('');
   const [twitter, setTwitter] = useState('');
   const [instagram, setInstagram] = useState('');
+  const [youtube, setYouTube] = useState(''); 
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -21,7 +22,8 @@ function AddCreator({ onCreatorAdded }) {
           name,
           description,
           twitter, 
-          instagram 
+          instagram,
+          youtube 
         }]);
   
       if (error) {
@@ -92,6 +94,16 @@ function AddCreator({ onCreatorAdded }) {
             value={instagram}
             onChange={(e) => setInstagram(e.target.value)}
             placeholder="Enter Instagram URL"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="youtube">YouTube URL</label> 
+          <input
+            type="text"
+            id="youtube"
+            value={youtube}
+            onChange={(e) => setYouTube(e.target.value)}
+            placeholder="Enter YouTube URL" 
           />
         </div>
         <button type="submit">Submit</button>

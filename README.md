@@ -38,7 +38,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Video Walkthrough](http://i.imgur.com/link/to/your/gif/file.gif)
+![Video Walkthrough](https://imageio.forbes.com/specials-images/imageserve/65124debcd94c9621c55df09/Rhett-and-Link-by-Devin-Yalkin-for-Forbes-0618-BW-copy/0x0.jpg?format=jpg&width=1440)
 
 GIF created with [Kap](https://getkap.co/) for macOS.
 

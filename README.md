@@ -38,7 +38,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Video Walkthrough](https://drive.google.com/file/d/1fHAKy7xsH4oAInXNjOayPdBBeCTXYTAO/view?usp=sharing)
+[Video Walkthrough](https://drive.google.com/file/d/1fHAKy7xsH4oAInXNjOayPdBBeCTXYTAO/view?usp=sharing)
 
 
 ## Notes
